@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './classTeacher.css'
+import '../ClassTeacher/ClassTeacher.css';
 
 const ClassTeacher = () => {
     const { classId } = useParams(); 
