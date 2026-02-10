@@ -1,0 +1,149 @@
+#principal-hero-wrapper {
+    padding: 40px 20px;
+    background: #f8fafc;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+#principal-header { margin-bottom: 30px; text-align: left; }
+#principal-header h2 { color: #0f172a; font-size: 2.2rem; font-weight: 800; }
+#principal-header p { color: #64748b; }
+
+/* --- Create Server Card Styles --- */
+#create-server-inline-card {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+#create-server-inline-card h3 { font-size: 1.4rem; margin-bottom: 10px; }
+#create-server-inline-card p { color: #cbd5e1; margin-bottom: 20px; font-size: 0.9rem; }
+
+.inline-form {
+    display: flex;
+    gap: 15px;
+}
+
+.inline-form input {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.inline-form input::placeholder { color: #94a3b8; }
+
+.inline-form button {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 0 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.inline-form button:hover { background: #059669; transform: translateY(-2px); }
+
+.section-divider { border: none; border-top: 1px solid #e2e8f0; margin: 40px 0; }
+.section-subtitle { margin-bottom: 20px; color: #1e293b; font-size: 1.2rem; }
+
+/* --- Stats Grid --- */
+#stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.premium-server-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s ease;
+}
+
+.premium-server-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+
+.card-top h3 { font-size: 1.3rem; color: #1e293b; margin: 5px 0; }
+.live-indicator { color: #10b981; font-weight: 800; font-size: 0.7rem; }
+.server-id-tag { color: #94a3b8; font-size: 0.8rem; }
+
+.card-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.stat-box { text-align: center; }
+.stat-value { display: block; font-size: 1.4rem; font-weight: 800; color: #0f172a; }
+.stat-label { font-size: 0.65rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.card-footer { display: flex; gap: 10px; }
+.manage-server-btn { flex: 2; background: #0f172a; color: white; border: none; padding: 10px; border-radius: 10px; cursor: pointer; font-weight: 600; }
+.log-btn { flex: 1; background: white; border: 1px solid #e2e8f0; border-radius: 10px; cursor: pointer; }
+
+/* --- Responsive --- */
+@media screen and (max-width: 768px) {
+    .inline-form { flex-direction: column; }
+    #principal-header h2 { font-size: 1.8rem; }
+    #stats-grid { grid-template-columns: 1fr; }
+}
+#teacher-requests-container {
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+#teacher-requests-container h3 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.request-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #edf2f7;
+}
+
+.req-info { display: flex; flex-direction: column; gap: 4px; }
+.req-teacher { font-size: 0.95rem; color: #475569; }
+.req-server { font-size: 0.85rem; color: #64748b; }
+
+.req-btns { display: flex; gap: 10px; }
+
+.acc-btn, .rej-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.acc-btn { background: #10b981; color: white; }
+.acc-btn:hover { background: #059669; }
+
+.rej-btn { background: #ef4444; color: white; }
+.rej-btn:hover { background: #dc2626; }

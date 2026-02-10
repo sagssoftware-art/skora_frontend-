@@ -1,0 +1,88 @@
+/* Scoped to parent to prevent style bleeding */
+#verifier-main-container {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif;
+    max-width: 450px;
+    margin: 2rem auto;
+    padding: 40px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#verifier-main-container #verifier-title {
+    color: #202124;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+/* Container for Input and Button */
+#verifier-main-container #input-field-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+}
+
+/* Google-style Input Field */
+#verifier-main-container #password {
+    width: 100%;
+    height: 48px;
+    padding: 13px 15px;
+    font-size: 16px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border 0.2s ease-in-out;
+}
+
+#verifier-main-container #password:focus {
+    outline: none;
+    border: 2px solid #1a73e8;
+    padding: 12px 14px; /* Adjusting for border thickness */
+}
+
+/* Professional Google Blue Button */
+#verifier-main-container #verify-button {
+    background-color: #1a73e8;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 24px;
+    height: 36px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end; /* Aligns button to the right like Google forms */
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+#verifier-main-container #verify-button:hover {
+    background-color: #185abc;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+}
+
+#verifier-main-container #verify-button:active {
+    background-color: #174ea6;
+}
+
+/* Notice Area Styling */
+#verifier-main-container #notice-area {
+    margin-top: 32px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #5f6368;
+    text-align: left;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 480px) {
+    #verifier-main-container {
+        border: none;
+        padding: 20px;
+        max-width: 100%;
+    }
+}

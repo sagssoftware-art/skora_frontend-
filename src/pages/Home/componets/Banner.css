@@ -1,0 +1,95 @@
+/* Import Google's signature-style font */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --google-blue: #1a73e8;
+    --google-grey-900: #202124;
+    --google-grey-700: #5f6368;
+    --max-width: 1280px;
+}
+
+#banner-section-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+    background-color: #ffffff;
+    gap: 40px;
+    overflow: hidden;
+}
+
+#banner-section-left-side {
+    flex: 1;
+    max-width: 600px;
+}
+
+#banner-section-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--google-grey-900);
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+}
+
+#banner-section-sub-heading {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--google-grey-700);
+    margin-bottom: 32px;
+}
+
+#banner-section-right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner-section-right-side img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    /* Adding a subtle floating animation typical of Google landing pages */
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Animations and Responsiveness */
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsive Tablet */
+@media (max-width: 1024px) {
+    #banner-section-heading {
+        font-size: 2.8rem;
+    }
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    #banner-section-main-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 24px;
+    }
+
+    #banner-section-heading {
+        font-size: 2.25rem;
+        margin-top: 32px;
+    }
+
+    #banner-section-sub-heading {
+        font-size: 1.1rem;
+    }
+
+    #banner-section-left-side {
+        max-width: 100%;
+    }
+}

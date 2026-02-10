@@ -1,0 +1,49 @@
+.footer {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 0;
+  border-top: 1px solid #f0fdf4; /* Very light green divider */
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.footer-content p {
+  color: #64748b; /* Soft slate */
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #16a34a; /* Theme green */
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #15803d; /* Darker green on hover */
+  text-decoration: underline;
+}
+
+/* Stack on mobile */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}

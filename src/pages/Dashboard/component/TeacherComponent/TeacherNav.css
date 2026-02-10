@@ -1,0 +1,48 @@
+/* Container styling */
+#educator-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 24px;
+    background-color: #1a3c34; /* Dark Forest Green */
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-family: sans-serif;
+}
+
+/* Logo and Text styling */
+#educator-nav-bar-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#educator-nav-bar-logo-container img {
+    height: 40px;
+    width: auto;
+}
+
+#logo-text-pane {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #4ade80; /* Mint Green Accent */
+}
+
+/* Logout Button styling */
+#logout-btn-educator {
+    background-color: #2d6a4f;
+    color: white;
+    border: 1px solid #4ade80;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#logout-btn-educator:hover {
+    background-color: #4ade80;
+    color: #1a3c34;
+    border-color: #ffffff;
+}

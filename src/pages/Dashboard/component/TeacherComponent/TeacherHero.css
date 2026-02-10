@@ -1,0 +1,144 @@
+/* TeacherHero.css */
+
+:root {
+    --google-blue: #1a73e8;
+    --google-red: #ea4335;
+    --google-yellow: #fbbc05;
+    --google-green: #34a853;
+    --text-dark: #202124;
+    --text-light: #5f6368;
+    --bg-light: #f8f9fa;
+    --border-color: #dadce0;
+    --shadow-soft: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+}
+
+#educator-hero-section {
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, sans-serif;
+    color: var(--text-dark);
+}
+
+/* Tools Section (Top Buttons) */
+#educator-hero-section-tools {
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
+    transition: all 0.3s ease;
+}
+
+#educator-tools-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Customizing your <Button /> inside the container */
+#educator-tools-container button, 
+#educator-tools-container a {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.2s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+#educator-tools-container button:hover {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+
+/* Server Discovery Section */
+#account-status-educator {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#server-discovery {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+}
+
+#server-discovery h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* Grid for Servers */
+.discovery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Individual Discovery Card */
+.discovery-card {
+    background: #fff;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    transition: border-color 0.2s;
+}
+
+.discovery-card:hover {
+    border-color: var(--google-blue) !important;
+}
+
+.discovery-card strong {
+    font-size: 1.1rem;
+    color: var(--google-blue);
+}
+
+/* Buttons inside Cards */
+.discovery-card button {
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+}
+
+/* Join Button */
+.discovery-card button:not([disabled]) {
+    background-color: var(--google-blue);
+    color: white;
+}
+
+.discovery-card button:not([disabled]):hover {
+    background-color: #1765cc;
+}
+
+/* Create Class Section inside Card */
+.discovery-card input[type="text"] {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px !important;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.discovery-card input[type="text"]:focus {
+    border-color: var(--google-blue);
+    box-shadow: inset 0 0 0 1px var(--google-blue);
+}
+
+.discovery-card div[style*="borderTop"] {
+    background-color: #fcfcfc;
+    margin-top: 1rem;
+}
+
+/* Status Badges */
+button[disabled] {
+    background-color: #e8f0fe;
+    color: var(--google-blue);
+    text-transform: capitalize;
+    font-size: 0.85rem;
+}   

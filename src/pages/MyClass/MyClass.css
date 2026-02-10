@@ -1,0 +1,203 @@
+/* MyClass.css - Google Cloud Console Professional Style */
+
+:root {
+    --gcp-blue: #1a73e8;
+    --gcp-bg: #ffffff;
+    --gcp-surface: #f8f9fa;
+    --gcp-border: #dadce0;
+    --gcp-text-header: #202124;
+    --gcp-text-body: #5f6368;
+    --gcp-hover: rgba(26, 115, 232, 0.04);
+}
+
+#student-class-wrapper {
+    background-color: var(--gcp-bg);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. Header Section - Like Cloud Console Top Bar */
+.glass-header {
+    background-color: var(--gcp-bg);
+    padding: 12px 24px;
+    border-bottom: 1px solid var(--gcp-border);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.glass-header h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gcp-text-header);
+    white-space: nowrap;
+}
+
+.search-box-container {
+    flex-grow: 1;
+    max-width: 700px;
+}
+
+.premium-search {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #f1f3f4;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--gcp-text-header);
+    transition: background 0.2s, border 0.2s;
+}
+
+.premium-search:focus {
+    background-color: #fff;
+    border: 1px solid var(--gcp-blue);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    outline: none;
+}
+
+/* 2. Content Layout */
+.class-content-area {
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 24px 0 16px 0;
+    color: var(--gcp-text-header);
+    border-bottom: 1px solid var(--gcp-border);
+    padding-bottom: 8px;
+}
+
+/* 3. Results Grid - Listing Style */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+.class-card-mini {
+    background: #fff;
+    border: 1px solid var(--gcp-border);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.class-card-mini:hover {
+    box-shadow: 0 2px 6px rgba(60,64,67,0.15);
+}
+
+.card-info h4 {
+    color: var(--gcp-blue);
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.server-name, .teacher-id {
+    display: block;
+    font-size: 13px;
+    color: var(--gcp-text-body);
+    margin-bottom: 4px;
+}
+
+/* 4. Action Buttons - Cloud Style Blue/Outline */
+.join-action-btn, .enter-btn {
+    align-self: flex-start;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 12px;
+}
+
+.join-action-btn {
+    background-color: transparent;
+    border: 1px solid var(--gcp-border);
+    color: var(--gcp-blue);
+}
+
+.join-action-btn:hover:not(:disabled) {
+    background-color: var(--gcp-hover);
+    border-color: var(--gcp-blue);
+}
+
+.join-action-btn.disabled {
+    color: #bdc1c6;
+    background-color: #f8f9fa;
+    border-color: #dadce0;
+    cursor: not-allowed;
+}
+
+/* 5. My Enrolled Classes - Accent Color Headers */
+.my-classes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.joined-class-card {
+    border: 1px solid var(--gcp-border);
+    border-top: 4px solid var(--gcp-blue); /* Google Cloud Blue Accent */
+    border-radius: 4px;
+    padding: 16px;
+    background-color: #fff;
+}
+
+.joined-class-card h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+}
+
+.joined-class-card p {
+    font-size: 13px;
+    color: var(--gcp-text-body);
+    margin-bottom: 16px;
+}
+
+.enter-btn {
+    background-color: var(--gcp-blue);
+    color: #fff;
+    border: none;
+    width: 100%;
+}
+
+.enter-btn:hover {
+    background-color: #185abc;
+    box-shadow: 0 1px 2px rgba(60,64,67,0.3);
+}
+
+/* Divider */
+.sub-divider {
+    border: 0;
+    height: 1px;
+    background: var(--gcp-border);
+    margin: 40px 0 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glass-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .premium-search {
+        width: 100%;
+    }
+}

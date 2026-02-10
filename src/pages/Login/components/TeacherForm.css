@@ -1,0 +1,532 @@
+/* ===== CONTAINER & LAYOUT ===== */
+.teacher-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f766e 0%, #14b8a6 50%, #06b6d4 100%);
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.teacher-login-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 460px;
+  padding: 48px 44px;
+  animation: teacherSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative top border */
+.teacher-login-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0f766e 0%, #14b8a6 50%, #06b6d4 100%);
+}
+
+@keyframes teacherSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== HEADER ===== */
+.teacher-login-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.teacher-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(15, 118, 110, 0.35);
+  animation: teacherIconFloat 3s ease-in-out infinite;
+}
+
+@keyframes teacherIconFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.teacher-icon svg {
+  width: 34px;
+  height: 34px;
+  color: white;
+}
+
+.teacher-login-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.6px;
+}
+
+.teacher-login-subtitle {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ===== FORM ===== */
+.teacher-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.teacher-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.teacher-form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* ===== INPUT FIELDS ===== */
+.teacher-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.teacher-input-prefix {
+  position: absolute;
+  left: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #475569;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.teacher-form-input {
+  width: 100%;
+  padding: 15px 18px;
+  font-size: 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+  color: #1e293b;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+/* Input with prefix spacing */
+.teacher-input-wrapper .teacher-form-input {
+  padding-left: 56px;
+}
+
+.teacher-form-input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.teacher-form-input:focus {
+  border-color: #14b8a6;
+  box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.12);
+  background: #fafbfc;
+}
+
+.teacher-form-input:disabled {
+  background: #f8fafc;
+  cursor: not-allowed;
+  opacity: 0.6;
+  color: #64748b;
+}
+
+/* ===== PASSWORD FIELD WITH TOGGLE ===== */
+.teacher-password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.teacher-password-wrapper .teacher-form-input {
+  padding-right: 50px;
+}
+
+.teacher-password-toggle {
+  position: absolute;
+  right: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  color: #64748b;
+}
+
+.teacher-password-toggle:hover:not(:disabled) {
+  background: #f1f5f9;
+  color: #0f766e;
+}
+
+.teacher-password-toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.teacher-password-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===== INPUT STATES ===== */
+.teacher-input-error {
+  border-color: #ef4444 !important;
+  background: #fef2f2;
+}
+
+.teacher-input-error:focus {
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.12) !important;
+}
+
+.teacher-input-success {
+  border-color: #10b981;
+  background: #f0fdf4;
+  padding-right: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 20px 20px;
+}
+
+.teacher-password-wrapper .teacher-input-success {
+  padding-right: 76px;
+  background-position: right 50px center;
+}
+
+.teacher-input-success:focus {
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
+}
+
+/* ===== ERROR MESSAGES ===== */
+.teacher-error-message {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #dc2626;
+  margin: 0;
+  font-weight: 500;
+  animation: teacherShake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+@keyframes teacherShake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+.teacher-error-icon {
+  font-size: 15px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.teacher-submit-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: #fef2f2;
+  border: 1.5px solid #fecaca;
+  border-radius: 10px;
+  color: #b91c1c;
+  font-size: 14px;
+  font-weight: 500;
+  animation: teacherSlideDown 0.3s ease;
+}
+
+@keyframes teacherSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SUCCESS MESSAGE ===== */
+.teacher-submit-success {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: #f0fdf4;
+  border: 1.5px solid #bbf7d0;
+  border-radius: 10px;
+  color: #15803d;
+  font-size: 14px;
+  font-weight: 600;
+  animation: teacherSlideDown 0.3s ease;
+}
+
+.teacher-success-icon {
+  font-size: 18px;
+  line-height: 1;
+  animation: teacherCheckmark 0.5s ease;
+}
+
+@keyframes teacherCheckmark {
+  0% {
+    transform: scale(0) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.teacher-submit-button {
+  width: 100%;
+  padding: 15px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.4);
+  letter-spacing: 0.02em;
+}
+
+.teacher-submit-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0d9488 0%, #06b6d4 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 118, 110, 0.5);
+}
+
+.teacher-submit-button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.4);
+}
+
+.teacher-submit-button:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Success button state */
+.teacher-button-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* ===== LOADING SPINNER ===== */
+.teacher-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255, 255, 255, 0.25);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: teacherSpin 0.7s linear infinite;
+}
+
+@keyframes teacherSpin {
+  to { transform: rotate(360deg); }
+}
+
+.teacher-checkmark {
+  font-size: 20px;
+  font-weight: bold;
+  animation: teacherCheckmark 0.5s ease;
+}
+
+/* ===== FOOTER ===== */
+.teacher-form-footer {
+  text-align: center;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.teacher-footer-text {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+.teacher-footer-link {
+  color: #0f766e;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.teacher-footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0f766e;
+  transition: width 0.3s ease;
+}
+
+.teacher-footer-link:hover {
+  color: #14b8a6;
+}
+
+.teacher-footer-link:hover::after {
+  width: 100%;
+}
+
+.teacher-footer-link:focus-visible {
+  outline: 2px solid #14b8a6;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 480px) {
+  .teacher-login-card {
+    padding: 36px 28px;
+    border-radius: 16px;
+  }
+
+  .teacher-login-title {
+    font-size: 26px;
+  }
+
+  .teacher-login-subtitle {
+    font-size: 14px;
+  }
+
+  .teacher-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 16px;
+  }
+
+  .teacher-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .teacher-form-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 14px 16px;
+  }
+
+  .teacher-input-wrapper .teacher-form-input {
+    padding-left: 52px;
+  }
+
+  .teacher-password-wrapper .teacher-form-input {
+    padding-right: 48px;
+  }
+
+  .teacher-submit-button {
+    font-size: 15px;
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .teacher-login-card {
+    padding: 28px 20px;
+  }
+
+  .teacher-login-form {
+    gap: 20px;
+  }
+
+  .teacher-form-group {
+    gap: 6px;
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+.teacher-form-input:focus-visible,
+.teacher-submit-button:focus-visible,
+.teacher-password-toggle:focus-visible {
+  outline: 3px solid #14b8a6;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .teacher-login-card {
+    border: 2px solid #1e293b;
+  }
+
+  .teacher-form-input {
+    border-width: 2px;
+  }
+
+  .teacher-submit-button {
+    border: 2px solid transparent;
+  }
+}

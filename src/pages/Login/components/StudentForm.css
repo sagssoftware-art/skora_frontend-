@@ -1,0 +1,204 @@
+/* ===== CONTAINER & BACKGROUND ===== */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  /* Dark green to light green gradient */
+  background: linear-gradient(135deg, #065f46 0%, #10b981 50%, #34d399 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===== CARD STYLES ===== */
+.login-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #059669; /* Principal Green Top Border */
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-title {
+  color: #1a1a1a;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  color: #666;
+  font-size: 14px;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Input Wrapper for Phone Prefix */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.input-wrapper:focus-within {
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
+}
+
+.input-prefix {
+  background: #f3f4f6;
+  padding: 0 12px;
+  color: #666;
+  font-size: 14px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #d1d5db;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Style for standard input (non-wrapped) */
+input.form-input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
+}
+
+/* Internal input for the phone wrapper */
+.input-wrapper .form-input {
+  border: none;
+  border-radius: 0;
+}
+
+/* Validation States */
+.input-error {
+  border-color: #ef4444 !important;
+}
+
+.input-success {
+  border-color: #10b981 !important;
+}
+
+/* ===== MESSAGES ===== */
+.error-message {
+  color: #dc2626;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.submit-error {
+  background-color: #fef2f2;
+  color: #dc2626;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #fee2e2;
+}
+
+/* ===== BUTTON STYLES ===== */
+.submit-button {
+  background: linear-gradient(to right, #059669, #10b981);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: linear-gradient(to right, #047857, #059669);
+  transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+  background: #9ca3af;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ===== FOOTER & LINKS ===== */
+.form-footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-link {
+  color: #059669;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #10b981;
+  text-decoration: underline;
+}
+
+/* ===== SPINNER ANIMATION ===== */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

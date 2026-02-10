@@ -1,0 +1,113 @@
+.snapquiz-container {
+    padding: 50px 20px;
+    background: radial-gradient(circle at center, #0a2418, #05140d);
+    min-height: 100vh;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+.quiz-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.premium-title {
+    font-size: 3rem;
+    color: #2ecc71;
+    text-shadow: 0 0 20px rgba(46, 204, 113, 0.4);
+    margin-bottom: 10px;
+}
+
+.button-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gen-btn {
+    background: #2ecc71;
+    color: #05140d;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gen-btn:hover {
+    background: #27ae60;
+    transform: scale(1.05);
+}
+
+/* Question Cards */
+.q-card-premium {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(46, 204, 113, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    backdrop-filter: blur(10px);
+}
+
+.q-number { color: #2ecc71; font-weight: bold; margin-bottom: 10px; }
+.q-text { font-size: 1.2rem; margin-bottom: 20px; line-height: 1.6; }
+
+.opt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.opt-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: left;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.opt-btn:hover:not(:disabled) {
+    background: rgba(46, 204, 113, 0.2);
+    border-color: #2ecc71;
+}
+
+/* Correct & Wrong Styles */
+.correct-opt { background: #27ae60 !important; color: white; border: none; }
+.wrong-opt { background: #c0392b !important; color: white; border: none; }
+.disabled-opt { opacity: 0.6; cursor: not-allowed; }
+
+.feedback { margin-top: 15px; font-weight: 600; font-size: 0.9rem; }
+.feedback.correct { color: #2ecc71; }
+.feedback.wrong { color: #e74c3c; }
+
+/* Result Card */
+.result-card {
+    background: #2ecc71;
+    color: #05140d;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 400px;
+    margin: 0 auto 40px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(46, 204, 113, 0.3);
+}
+
+.final-score { font-size: 2.5rem; font-weight: 800; margin: 10px 0; }
+
+/* Loader */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(46, 204, 113, 0.2);
+    border-top: 5px solid #2ecc71;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }

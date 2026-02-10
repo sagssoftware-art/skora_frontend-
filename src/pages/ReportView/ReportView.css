@@ -1,0 +1,202 @@
+/* --- Light Console Analysis Theme --- */
+:root {
+  --bg-light: #f8fafc;        /* හරිම ලස්සන අළු-සුදු පාටක් */
+  --card-bg: #ffffff;
+  --text-main: #1e293b;       /* තද නිල්-කළු පාටක් */
+  --text-dim: #64748b;        /* ලා අළු පාටක් */
+  --accent-blue: #2563eb;     /* Professional Blue */
+  --accent-green: #16a34a;
+  --accent-red: #dc2626;
+  --accent-yellow: #ca8a04;
+  --border-color: #e2e8f0;    /* හීනි Border පාටක් */
+}
+
+.report-view-container {
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 2.5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* --- Header Section --- */
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.title-section h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.title-section p {
+  color: var(--text-dim);
+  font-size: 1rem;
+  margin-top: 0.4rem;
+}
+
+.title-section strong {
+  color: var(--accent-blue);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.overall-badge {
+  background: #fff;
+  color: var(--text-main);
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 50px; /* Pill shape */
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* --- Report Grid & Cards --- */
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.report-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.8rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.report-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-blue);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.subject-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.date-tag {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+/* --- Score Display --- */
+.score-display {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.main-score {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--accent-blue);
+  letter-spacing: -2px;
+}
+
+.out-of {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin-left: 0.5rem;
+}
+
+/* --- Progress Bar --- */
+.progress-container {
+  background: #f1f5f9;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 0.6rem;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1.2s ease-out;
+}
+
+/* --- Footer --- */
+.card-footer {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.grade-text {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  letter-spacing: 0.05em;
+}
+
+.grade-text.pass {
+  color: var(--accent-green);
+  background: #f0fdf4;
+  border: 1px solid #bcf0da;
+}
+
+.grade-text.fail {
+  color: var(--accent-red);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+/* --- States --- */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff;
+  color: var(--accent-blue);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f1f5f9;
+  border-top: 5px solid var(--accent-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

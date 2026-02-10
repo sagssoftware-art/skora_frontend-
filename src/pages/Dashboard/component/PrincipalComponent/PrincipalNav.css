@@ -1,0 +1,35 @@
+#principal-nav-bar-main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    /* Soft matcha green background */
+    background-color: #f0f9f4; 
+    border-bottom: 3px solid #b7e4c7;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+#principal-nav-bar-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#principal-nav-bar-logo-container img {
+    height: 40px;
+    /* Optional: subtle bounce hover for that anime feel */
+    transition: transform 0.3s ease;
+}
+
+#principal-nav-bar-logo-container img:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+#logo-container-text-pane {
+    font-family: 'Inter', 'Varela Round', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    /* Forest green for contrast */
+    color: #2d6a4f;
+    letter-spacing: 0.5px;
+}

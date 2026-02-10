@@ -1,0 +1,120 @@
+/* NavBar.css */
+
+#student-dashboard-navbar {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* ================= LEFT SIDE (LOGO) ================= */
+#student-nav-bar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#student-nav-bar-logo-container img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+#student-dashboard-navbarx {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ================= RIGHT SIDE ================= */
+#student-nav-bar-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* user info + profile */
+#student-nav-bar-action-btns-section1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#student-nav-bar-text-info-pane {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+#div-nav-bar-user-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#student-nav-bar-grade {
+  font-size: 12px;
+  color: #666;
+}
+
+/* profile circle */
+#student-nav-bar-profile-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #4f46e5;
+  color: white;
+  font-weight: 600;
+}
+
+/* logout area */
+#student-nav-bar-action-btns-section2 {
+  display: flex;
+  align-items: center;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 900px) {
+  #student-dashboard-navbarx {
+    font-size: 18px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  #student-dashboard-navbar {
+    padding: 10px 12px;
+  }
+
+  /* reduce spacing */
+  #student-nav-bar-action-btns {
+    gap: 10px;
+  }
+
+  /* hide grade to save space */
+  #student-nav-bar-grade {
+    display: none;
+  }
+
+  /* make profile a bit smaller */
+  #student-nav-bar-profile-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  /* optional: hide name, keep only icon */
+  #div-nav-bar-user-name {
+    display: none;
+  }
+}

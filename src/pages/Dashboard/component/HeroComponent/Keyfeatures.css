@@ -1,0 +1,45 @@
+/* Keyfeatures.css */
+
+#keyfeatures-bin {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* direct children (your Card components) */
+#keyfeatures-bin > * {
+  flex: 1 1 260px;   /* grow, shrink, base width */
+  max-width: 320px; /* prevents giant stretching on wide screens */
+  min-width: 220px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #keyfeatures-bin > * {
+    flex: 1 1 240px;
+    max-width: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  #keyfeatures-bin {
+    padding: 15px;
+    
+  flex-direction: column;
+    gap: 15px;
+  }
+
+  #keyfeatures-bin > * {
+    flex: 1 1 100%;
+    max-width: 100%;
+
+  }
+}

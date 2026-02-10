@@ -1,0 +1,187 @@
+/* Classroom.css - Google Classroom Inspired Theme */
+
+:root {
+    --google-blue: #1a73e8;
+    --google-gray: #5f6368;
+    --google-border: #dadce0;
+    --bg-light: #ffffff;
+    --notice-bg: #f8f9fa;
+}
+
+.classroom-container {
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #3c4043;
+}
+
+/* 1. Header Area - Classroom Banner Style */
+.class-header {
+    background-color: var(--google-blue);
+    background-image: url('https://www.gstatic.com/classroom/themes/img_read.jpg'); /* Classroom default pattern */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+}
+
+.class-header h1 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.class-header p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-top: 8px;
+}
+
+/* 2. Grid Layout */
+.class-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Sidebar style for notices */
+    gap: 24px;
+}
+
+/* 3. Notice Board (Sidebar Style) */
+.notice-board {
+    background: white;
+    border: 1px solid var(--google-border);
+    border-radius: 8px;
+    padding: 16px;
+    height: fit-content;
+}
+
+.notice-board h3 {
+    font-size: 14px;
+    color: var(--google-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.post-notice textarea {
+    width: 100%;
+    border: 1px solid var(--google-border);
+    border-radius: 4px;
+    padding: 10px;
+    resize: none;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.post-btn {
+    background-color: var(--google-blue);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+}
+
+.notice-item {
+    border-top: 1px solid var(--google-border);
+    padding: 12px 0;
+}
+
+.notice-item p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.notice-item small {
+    color: var(--google-gray);
+    font-size: 12px;
+}
+
+/* 4. Materials Section (Main Content Style) */
+.materials-section {
+    background: white;
+}
+
+.materials-section h3 {
+    font-size: 22px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--google-blue);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: var(--google-blue);
+}
+
+.post-material-form {
+    border: 1px solid var(--google-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.post-material-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--google-border);
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.add-mat-btn {
+    background: transparent;
+    color: var(--google-blue);
+    border: 1px solid var(--google-border);
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.add-mat-btn:hover {
+    background: rgba(26, 115, 232, 0.04);
+}
+
+/* Material List Items */
+.material-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid var(--google-border);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: 0.2s;
+}
+
+.material-item:hover {
+    box-shadow: 0 1px 3px rgba(60,64,67,0.3);
+}
+
+.mat-info strong {
+    display: block;
+    font-size: 16px;
+    color: #3c4043;
+}
+
+.view-link {
+    text-decoration: none;
+    color: var(--google-blue);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.empty-state {
+    color: var(--google-gray);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .class-grid {
+        grid-template-columns: 1fr;
+    }
+}

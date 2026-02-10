@@ -1,0 +1,72 @@
+/* ===== HERO SECTION ===== */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#student-dashboard-hero-section {
+    position: relative;
+    margin: 20px;
+    padding: 60px 40px;
+    border-radius: 20px;
+    /* Principal Gradient: Dark green to light green */
+    /* background: linear-gradient(135deg, #065f46 0%, #059669 50%, #10b981 100%); */
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* box-shadow: 0 10px 30px rgba(5, 150, 105, 0.2); */
+}
+
+/* Subtle background pattern/overlay */
+#student-dashboard-hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+/* Text Pane Styling */
+#student-hero-section-text-pane {
+    position: relative;
+    color: rgb(0, 0, 0)    ;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -1px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    #student-dashboard-hero-section {
+        margin: 15px;
+        padding: 40px 20px;
+        border-radius: 15px;
+    }
+
+    #student-hero-section-text-pane {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #student-hero-section-text-pane {
+        font-size: 1.4rem;
+    }
+}

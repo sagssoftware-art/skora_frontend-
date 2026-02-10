@@ -1,0 +1,273 @@
+/* Main Container */
+#register-section-teacher-form-main-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styles */
+#register-form-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+#register-form-sub-title {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Form Container */
+.register-section-student-input-category-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input Field Container */
+.register-section-student-form-input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Label Styles */
+.register-section-student-form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.required-asterisk {
+    color: #e53e3e;
+    margin-left: 2px;
+}
+
+/* Input Container - Dynamic Border Colors */
+.register-section-input-element-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.register-section-input-element-container:focus-within {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Neutral State (default) */
+.register-section-input-element-container.neutral {
+    border-color: #d1d5db;
+}
+
+.register-section-input-element-container.neutral:focus-within {
+    border-color: #3b82f6;
+}
+
+/* Error State */
+.register-section-input-element-container.error {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.register-section-input-element-container.error:focus-within {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Success State */
+.register-section-input-element-container.success {
+    border-color: #10b981;
+    background-color: #f0fdf4;
+}
+
+.register-section-input-element-container.success:focus-within {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Input Fields */
+.register-section-input-element-container input {
+    flex: 1;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #1a1a1a;
+}
+
+.register-section-input-element-container input::placeholder {
+    color: #9ca3af;
+}
+
+/* Success Icon */
+.success-icon {
+    color: #10b981;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 12px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Error Message */
+.error-message {
+    font-size: 13px;
+    color: #dc2626;
+    margin-top: 4px;
+    padding-left: 4px;
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Submit Button */
+.register-btn {
+    margin-top: 10px;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+}
+
+.register-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
+}
+
+.register-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.register-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 640px) {
+    #register-section-teacher-form-main-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #register-form-title {
+        font-size: 24px;
+    }
+
+    #register-form-sub-title {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .register-section-student-input-category-container {
+        gap: 18px;
+    }
+
+    .register-section-input-element-container input {
+        padding: 11px 12px;
+        font-size: 14px;
+    }
+
+    .register-btn {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+}
+
+/* Accessibility - Focus Visible */
+input:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    #register-section-teacher-form-main-container {
+        background: #1f2937;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    #register-form-title {
+        color: #f9fafb;
+    }
+
+    #register-form-sub-title {
+        color: #9ca3af;
+    }
+
+    .register-section-student-form-label {
+        color: #e5e7eb;
+    }
+
+    .register-section-input-element-container {
+        background: #374151;
+        border-color: #4b5563;
+    }
+
+    .register-section-input-element-container input {
+        color: #f9fafb;
+    }
+
+    .register-section-input-element-container.neutral {
+        border-color: #4b5563;
+    }
+}

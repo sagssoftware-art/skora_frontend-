@@ -1,0 +1,117 @@
+:root {
+  --google-blue: #1a73e8;
+  --text-main: #202124;
+  --text-sub: #5f6368;
+  --font-family: 'Google Sans', Roboto, Arial, sans-serif;
+}
+
+#hero-section-main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 8%;
+  background-color: #ffffff;
+  font-family: var(--font-family);
+  min-height: 80vh;
+  gap: 40px;
+  overflow: hidden;
+}
+
+#hero-section-title-pane {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Logo Section */
+#hero-section-logo-pane {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#hero-section-logo-image img {
+  height: 48px;
+  width: auto;
+  margin-right: 15px;
+}
+
+#hero-section-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#hero-section-logo-text-service-name {
+  font-size: 24px;
+  color: var(--text-sub);
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+#hero-section-logo-text-service-provider {
+  font-size: 11px;
+  color: #80868b;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 2px;
+}
+
+/* Typography */
+#hero-section-main-heading {
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 400;
+  color: var(--text-main);
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+
+#hero-section-sub-title {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-sub);
+  max-width: 520px;
+}
+
+/* Video Section */
+#hero-section-right-side-image {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+}
+
+#hero-section-right-side-image video {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+  /* Google's subtle Elevation shadow */
+  box-shadow: 0 1px 3px rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+}
+
+/* --- Responsive (Tablet & Mobile) --- */
+@media (max-width: 1024px) {
+  #hero-section-main-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  #hero-section-logo-pane {
+    justify-content: center;
+  }
+
+  #hero-section-main-heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  #hero-section-sub-title {
+    margin: 0 auto;
+  }
+
+  #hero-section-right-side-image {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
