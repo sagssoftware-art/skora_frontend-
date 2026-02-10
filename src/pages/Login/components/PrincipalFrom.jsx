@@ -156,7 +156,7 @@ const PrincipalForm = () => {
       
 
       const response = await axios.post(
-        'http://localhost:3000/principal/login',
+        'http://skora-backend-v2.vercel.app/principal/login',
         userData,
         {
           timeout: 10000, // 10 second timeout

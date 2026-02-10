@@ -29,7 +29,7 @@ const Classroom = () => {
     // ටීචර්ට මේ පන්තිය අයිතිදැයි Backend එකෙන් පරීක්ෂා කිරීම
     const checkOwnership = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/teachers/my-classes/${teacherSession.number}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/teachers/my-classes/${teacherSession.number}`);
             // ටීචර්ගේ පන්ති ලැයිස්තුවේ මේ classId එක තියෙනවාද බලනවා
             const owns = res.data.some(c => c.class_id === parseInt(classId));
             setIsOwner(owns);

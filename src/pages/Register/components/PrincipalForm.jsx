@@ -124,7 +124,7 @@ const navigate = useNavigate();
         console.log("Validation Success:", userData);
 
         try {
-            const response = await axios.post('http://localhost:3000/principal/register', userData);
+            const response = await axios.post('http://skora-backend-v2.vercel.app/principal/register', userData);
             
             if (response.data.msg === true) {
                 localStorage.setItem('SKORAPRINsession', formData.number);

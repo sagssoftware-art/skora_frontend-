@@ -18,7 +18,7 @@ const AddAssignment = () => {
         setLoading(true);
 
         try {
-            await axios.post('http://localhost:3000/teachers/add-assignment', {
+            await axios.post('http://skora-backend-v2.vercel.app/teachers/add-assignment', {
                 class_id: classId,
                 ...formData
             });

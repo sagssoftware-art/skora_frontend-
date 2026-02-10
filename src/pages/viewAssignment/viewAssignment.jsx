@@ -15,7 +15,7 @@ const viewAssignment = () => {
             try {
                 setLoading(true);
                 // 1. ළමයාගේ විස්තර සහ Reports ගන්නවා
-                const reportRes = await axios.get(`http://localhost:3000/students/my-full-reports/${mobile}`);
+                const reportRes = await axios.get(`http://skora-backend-v2.vercel.app/students/my-full-reports/${mobile}`);
                 setReports(reportRes.data.reports || []);
                 
                 // අපි හිතමු ළමයාගේ පන්තියත් මේ API එකෙන්ම එනවා කියලා
@@ -27,7 +27,7 @@ const viewAssignment = () => {
 
                 // 2. පන්තියට අදාළ Assignments ගන්නවා
                 if (classId !== 'Not Assigned') {
-                    const assignRes = await axios.get(`http://localhost:3000/students/my-assignments/${classId}`);
+                    const assignRes = await axios.get(`http://skora-backend-v2.vercel.app/students/my-assignments/${classId}`);
                     setAssignments(assignRes.data || []);
                 }
             } catch (err) {

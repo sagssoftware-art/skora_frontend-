@@ -19,7 +19,7 @@ const PrincipalHero = () => {
 
     const fetchStats = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/principal/server-stats/${adminNumber}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/principal/server-stats/${adminNumber}`);
             setServerStats(res.data);
         } catch (err) {
             console.error("Error fetching stats:", err);

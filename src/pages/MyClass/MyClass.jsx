@@ -24,7 +24,7 @@ const MyClass = () => {
     // 1. දැනටමත් Enroll වී ඇති පන්ති ලබා ගැනීම
     const fetchMyClasses = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/students/my-classes/${studentId}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/students/my-classes/${studentId}`);
             setMyJoinedClasses(res.data);
         } catch (err) { console.error("Error fetching joined classes"); }
     };
@@ -32,7 +32,7 @@ const MyClass = () => {
     // 2. යවා ඇති සියලුම Requests ලබා ගැනීම (Pending/Status බැලීමට)
     const fetchMyRequests = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/students/my-requests/${studentId}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/students/my-requests/${studentId}`);
             setMyRequests(res.data);
         } catch (err) { console.error("Error fetching requests"); }
     };
@@ -40,7 +40,7 @@ const MyClass = () => {
     // 3. පද්ධතියේ ඇති සියලුම පන්ති Discovery සඳහා ලබා ගැනීම
     const fetchAllClasses = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/students/search-classes`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/students/search-classes`);
             setAllClasses(res.data);
             setFilteredClasses(res.data); 
         } catch (err) { console.error("Error fetching all classes"); }
@@ -61,7 +61,7 @@ const MyClass = () => {
     const joinClass = async (classData) => {
         if (myJoinedClasses.length >= 5) return alert("Limit Reached (Max 5 Classes)!");
         try {
-            const res = await axios.post('http://localhost:3000/students/join-class-request', {
+            const res = await axios.post('http://skora-backend-v2.vercel.app/students/join-class-request', {
                 student_id: studentId,
                 class_id: classData.class_id,
                 teacher_number: classData.teacher_number

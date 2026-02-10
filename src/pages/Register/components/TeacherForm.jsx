@@ -148,7 +148,7 @@ const TeacherForm = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await axios.post('http://localhost:3000/teachers/register', {
+            const response = await axios.post('http://skora-backend-v2.vercel.app/teachers/register', {
                 fullname: formData.fullname.trim(),
                 idNumber: formData.idNumber.trim(),
                 salaryNumber: formData.salaryNumber.trim(),

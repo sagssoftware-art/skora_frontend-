@@ -14,7 +14,7 @@ const ReportView = () => {
     const fetchReports = useCallback(async (mobile) => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:3000/students/my-full-reports/${mobile}`);
+            const response = await axios.get(`http://skora-backend-v2.vercel.app/students/my-full-reports/${mobile}`);
             
             // Backend එකෙන් එවන දත්ත පරීක්ෂා කිරීමට (Console එක බලන්න)
             console.log("Full Response:", response.data);

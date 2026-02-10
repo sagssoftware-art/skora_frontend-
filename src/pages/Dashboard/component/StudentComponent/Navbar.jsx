@@ -29,7 +29,7 @@ const Navbar = () => {
     useEffect(() => {
         const number = localStorage.getItem('SKORASTUsession');
         if (number) {
-            axios.post('http://localhost:3000/studentDash/userinfo', { number })
+            axios.post('http://skora-backend-v2.vercel.app/studentDash/userinfo', { number })
                 .then((response) => {
                     // Assuming your backend returns an array [ {userData} ]
                     setUser(response.data[0]); 

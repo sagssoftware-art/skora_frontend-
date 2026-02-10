@@ -160,7 +160,7 @@ const TeacherForm = () => {
       console.log(userData);
       
       const response = await axios.post(
-        'http://localhost:3000/teachers/login',
+        'http://skora-backend-v2.vercel.app/teachers/login',
         userData,
         {
           timeout: 10000, // 10 second timeout

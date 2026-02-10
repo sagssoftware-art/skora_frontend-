@@ -41,7 +41,7 @@ const ClassTeacher = () => {
     // 🆕 ගුරුවරයාට අයිති පන්ති ලිස්ට් එක මෙතනින් ගන්නවා
     const fetchMyClasses = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/teachers/my-classes/${teacherNumber}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/teachers/my-classes/${teacherNumber}`);
             setMyClasses(res.data);
         } catch (err) {
             console.error("Error loading classes:", err);
@@ -50,7 +50,7 @@ const ClassTeacher = () => {
 
     const fetchAnnouncements = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/teachers/announcements/${classId}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/teachers/announcements/${classId}`);
             setAnnouncements(res.data);
         } catch (err) {
             console.error("Error loading announcements:", err);
@@ -59,7 +59,7 @@ const ClassTeacher = () => {
 
     const fetchMaterials = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/teachers/materials/${classId}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/teachers/materials/${classId}`);
             setMaterials(res.data);
         } catch (err) {
             console.error("Error loading materials:", err);
@@ -71,7 +71,7 @@ const ClassTeacher = () => {
         if (!classId || classId === "undefined") return alert("Please select a class first!");
 
         try {
-            await axios.post('http://localhost:3000/teachers/add-announcement', {
+            await axios.post('http://skora-backend-v2.vercel.app/teachers/add-announcement', {
                 class_id: classId,
                 content: newPost
             });

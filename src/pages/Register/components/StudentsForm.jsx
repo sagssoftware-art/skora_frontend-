@@ -205,7 +205,7 @@ const StudentsForm = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:3000/students/register', formData);
+      const response = await axios.post('http://skora-backend-v2.vercel.app/students/register', formData);
       if (response.data.msg) {
         localStorage.setItem('SKORASTUsession', formData.number);
         window.location.href = '/dashboard/student';

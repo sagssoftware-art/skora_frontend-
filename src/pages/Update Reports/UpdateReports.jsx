@@ -37,7 +37,7 @@ const UpdateReports = () => {
 
     const fetchMyClasses = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/teachers/my-classes/${teacherNumber}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/teachers/my-classes/${teacherNumber}`);
             setMyClasses(res.data);
         } catch (err) {
             console.error("Error loading classes:", err);
@@ -46,7 +46,7 @@ const UpdateReports = () => {
 
     const fetchClassStudents = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/teachers/class-students/${classId}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/teachers/class-students/${classId}`);
             setStudents(res.data);
         } catch (err) {
             console.error("Error fetching students:", err);
@@ -59,7 +59,7 @@ const UpdateReports = () => {
         
         setLoading(true);
         try {
-            await axios.post('http://localhost:3000/teachers/update-student-report', {
+            await axios.post('http://skora-backend-v2.vercel.app/teachers/update-student-report', {
                 student_id: selectedStudent.student_id,
                 class_id: classId,
                 subject: reportData.subject,

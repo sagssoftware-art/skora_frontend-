@@ -35,7 +35,7 @@ const TeacherHero = () => {
 
     const fetchTeacherClass = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/teachers/my-class-id/${teacherNumber}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/teachers/my-class-id/${teacherNumber}`);
             if (res.data && res.data.class_id) {
                 setMyClassId(res.data.class_id);
             }
@@ -45,7 +45,7 @@ const TeacherHero = () => {
     // 🆕 ශිෂ්‍යයන් එවපු ඉල්ලීම් ටික ලබා ගැනීම
     const fetchStudentRequests = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/teachers/student-requests/${teacherNumber}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/teachers/student-requests/${teacherNumber}`);
             setStudentRequests(res.data || []);
         } catch (err) { console.error("Error fetching student requests", err); }
     };
@@ -53,7 +53,7 @@ const TeacherHero = () => {
     // 🆕 ඉල්ලීමක් Accept කිරීම
     const handleAction = async (requestId, action) => {
         try {
-            await axios.post('http://localhost:3000/teachers/student-request-action', {
+            await axios.post('http://skora-backend-v2.vercel.app/teachers/student-request-action', {
                 request_id: requestId,
                 status: action // 'accepted' හෝ 'rejected'
             });
@@ -64,21 +64,21 @@ const TeacherHero = () => {
 
     const fetchAllServers = async () => {
         try {
-            const res = await axios.get('http://localhost:3000/server/all-servers');
+            const res = await axios.get('http://skora-backend-v2.vercel.app/server/all-servers');
             setAllServers(res.data);
         } catch (err) { console.error(err); }
     };
 
     const fetchMyPermissions = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/server/my-permissions/${teacherNumber}`);
+            const res = await axios.get(`http://skora-backend-v2.vercel.app/server/my-permissions/${teacherNumber}`);
             setJoinedServers(res.data || []);
         } catch (err) { console.error(err); }
     };
 
     const handleJoinRequest = async (serverId) => {
         try {
-            await axios.post('http://localhost:3000/server/join-request', {
+            await axios.post('http://skora-backend-v2.vercel.app/server/join-request', {
                 teacher_number: teacherNumber,
                 server_id: serverId
             });
@@ -91,7 +91,7 @@ const TeacherHero = () => {
         const className = newClassName[serverId];
         if (!className) return alert("Please enter a class name");
         try {
-            const res = await axios.post('http://localhost:3000/teachers/create-class', {
+            const res = await axios.post('http://skora-backend-v2.vercel.app/teachers/create-class', {
                 class_name: className,
                 teacher_number: teacherNumber,
                 server_id: serverId

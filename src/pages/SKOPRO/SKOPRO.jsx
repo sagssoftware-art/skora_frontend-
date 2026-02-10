@@ -14,7 +14,7 @@ const SKOPRO = () => {
     if (!serverName) return setStatus({ message: 'Enter a name first!', available: false });
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:3000/server/check/${serverName}`);
+      const response = await axios.get(`http://skora-backend-v2.vercel.app/server/check/${serverName}`);
       setStatus({ message: response.data.message, available: response.data.available });
     } catch (err) {
       setStatus({ message: 'Server connection error', available: false });
@@ -33,7 +33,7 @@ const SKOPRO = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/server/create', {
+      const response = await axios.post('http://skora-backend-v2.vercel.app/server/create', {
         name: serverName,
         admin: adminSession
       });

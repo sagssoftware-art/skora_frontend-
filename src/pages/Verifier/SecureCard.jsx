@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const SecureCard = ({ title, url, query }) => {
   function login() {
-    let location = 'http://localhost:3000'+url;
+    let location = 'http://skora-backend-v2.vercel.app'+url;
     let userData = {
       mobileNumber: localStorage.getItem(query),
       password: document.getElementById('password').value
